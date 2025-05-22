@@ -1,0 +1,24 @@
+
+.progress-circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #CACEFF;
+}
+
+.progress-circle-progress {
+  fill: none;
+  stroke: #221E5D;
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.progress-text {
+  position: absolute;
+  font-weight: bold;
+  color: #221E5D;
+}

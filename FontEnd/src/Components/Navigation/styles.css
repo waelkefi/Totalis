@@ -1,0 +1,75 @@
+.sidebarMain {
+  background: #FFF;
+  color: #000;
+  height: 100%;
+  width: 200px;
+  transition: all 0.5s;
+  border-radius: 12px;
+display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top_section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  height: 80px;
+}
+
+.bars {
+  display: flex;
+  font-size: 25px;
+  border: none;
+  background: none;
+}
+
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+  color: #84849A;
+  display: flex;
+  width: 85%;
+  text-decoration: none;
+}
+
+.link:hover {
+  background: #E1F5F9;
+  color: #221E5D;
+  transition: all 0.5s;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.active {
+  background: #E1F5F9;
+  color: #221E5D;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.icon,
+.link_text {
+  font-size: 20px;
+}
+
+
+.logout>button{
+  background:#E5F3FB;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  color: #221E5D;
+  padding: 10px 5px;
+}
+
+.logout>button>div {
+display: flex;
+}

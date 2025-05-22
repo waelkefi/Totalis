@@ -1,0 +1,95 @@
+
+.milestone-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.milestone-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #080817;
+  text-align: start;
+}
+
+
+
+.milestone-date {
+  font-size: 12px;
+  color: #B3B3C1;
+  margin: 0;
+  text-align: start;
+}
+.milestone-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.milestone-goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f8f9fb;
+  border-radius: 8px;
+}
+
+.goal-title {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.goal-date {
+  font-size: 12px;
+  color: #7c8db5;
+}
+
+.milestone-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-goal-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: #f0f2f5;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.milestone-gap-btn {
+  background-color: #1f2b5b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.milestone-gap-btn:hover {
+  background-color: #151e3e;
+}
+
+.new-goal-btn:hover {
+  background-color: #e5e8ec;
+}

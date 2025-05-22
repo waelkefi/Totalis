@@ -1,0 +1,48 @@
+
+.modal-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    z-index: 1055;
+  }
+  
+  .modal-container-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    z-index: 1056;
+  }
+  
+  .modal-content-form {
+    position: relative;
+    background-color: #fff;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 50vw;
+    max-width: 100% !important;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .milestone-form-dialog {
+    width: 50vw !important;
+    /* max-width: 960px !important; */
+    max-height: 90vh;
+    padding: 20px;
+    background: white;
+    overflow-y: auto;
+  }
