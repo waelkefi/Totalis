@@ -10,6 +10,7 @@ import TaskForm from './FormsModals/TaskForm';
 import GoalsActions from './MilestoneGapComp/GoalsAction';
 import WeeklyPlan from './MilestoneGapComp/WeeklyPlan';
 import DailyPlan from './MilestoneGapComp/DailyPlan';
+import Calendar from './Calender/Calendar';
 const MilestoneGapModal = ({ isOpen, onClose, goals }) => {
   const [activeTab, setActiveTab] = useState('Goal\'s actions');
   const tabs = ["Goal's actions", "Weekly planning", "Daily planning", "Review"];
@@ -80,11 +81,16 @@ const MilestoneGapModal = ({ isOpen, onClose, goals }) => {
           onOpenNew={openModalGoal}
         />;
       case "Weekly planning":
-        return <WeeklyPlan
+        // return <WeeklyPlan
+        //   tasks={tasks}
+        //   selectedGoal={selectedGoal}
+        //   setTasks={setTasks}
+        // />;
+       return <Calendar
           tasks={tasks}
           selectedGoal={selectedGoal}
           setTasks={setTasks}
-        />;
+       />
       case "Daily planning":
         return <DailyPlan
           tasks={tasks}

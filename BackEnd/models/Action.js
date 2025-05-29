@@ -20,8 +20,8 @@ const ActionSchema = new Schema({
   title:     { type: String, required: true },
   status:    { type: String, enum: ['todo', 'completed'], default: 'todo' },
   date:      { type: Date, required: true }, // anciennement dateTime
-  startHour: { type: String, required: true }, // format HH:mm (ex: '08:30')
-  endHour:   { type: String, required: true }
+  startHour: { type: String, }, // format HH:mm (ex: '08:30')
+  endHour:   { type: String, }
 }, { timestamps: true });
 
 export default mongoose.model('Action', ActionSchema);

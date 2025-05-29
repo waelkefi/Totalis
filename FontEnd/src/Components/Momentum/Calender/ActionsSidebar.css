@@ -1,0 +1,68 @@
+
+.actions-sidebar {
+  width: 250px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-item {
+  padding: 16px;
+  border-radius: 8px;
+  cursor: grab;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.action-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-item:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.action-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.action-duration {
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.action-item[draggable="true"] {
+  opacity: 1;
+}
+
+.action-item.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}

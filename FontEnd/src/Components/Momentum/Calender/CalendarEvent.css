@@ -1,0 +1,112 @@
+
+.calendar-event {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  cursor: move;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 10;
+  user-select: none;
+}
+
+.calendar-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+
+.event-content {
+  padding: 8px 10px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.event-content * {
+  pointer-events: auto;
+}
+
+.event-name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  flex: 1;
+  pointer-events: none;
+}
+
+.delete-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.event-time {
+  padding: 0 10px 6px;
+  font-size: 11px;
+  opacity: 0.9;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: ns-resize;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.calendar-event:hover .resize-handle {
+  opacity: 1;
+}
+
+.resize-handle::before {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+}
+
+.calendar-event.dragging {
+  opacity: 0.7;
+  transform: rotate(2deg);
+  z-index: 1000;
+}
+
+.calendar-event.resizing {
+  z-index: 1000;
+}
+
+.resize-handle:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

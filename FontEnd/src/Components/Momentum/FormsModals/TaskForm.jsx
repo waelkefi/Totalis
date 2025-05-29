@@ -12,11 +12,9 @@ const TaskValidationSchema = Yup.object().shape({
     .nullable()
     .typeError('Invalid date')
     .min(new Date(), 'Date cannot be in the past'),
-    startHour: Yup.string()
-    .required('Start hour is required')
+  startHour: Yup.string()
     .matches(/^([01]\d|2[0-3]):([0-5]\d)$/, 'Start hour must be a valid time (HH:mm)'),
   endHour: Yup.string()
-    .required('End hour is required')
     .matches(/^([01]\d|2[0-3]):([0-5]\d)$/, 'End hour must be a valid time (HH:mm)')
     .test('is-after-start', 'End hour must be after start hour', function (value) {
       const { startHour } = this.parent;
